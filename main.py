@@ -2,7 +2,7 @@ import streamlit as st
 import random
 import pandas as pd
 from Global import G
-from gpt import chatGPT
+#from gpt import chatGPT
 
 G.init('lettresProposees', [])
 G.init('nombredefautes',0)
