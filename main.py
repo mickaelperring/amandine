@@ -15,10 +15,8 @@ listedemots = ['CUISINE','CLASSEUR','TIRELIRE','SUISSE','GRASSOUILLET','POIDS','
     "FERME", "FEUILLE", "FLEUR", "FONTAINE", "FORET", "FRIGO", "GANT", "GARE", "GATEAU", "GIRAFFE", "HORLOGE", 
     "HOTEL", "ILE", "IMMEUBLE", "INSECTE", "INTERNET", "JARDIN", "JOURNAL", "JUPE", "LAC"]
 
-st.write(chatGPT.question('donne moi un mot aléatoire de la langue française en majuscule commencant par D'))
-st.stop()
 if G.mot == '' :
-    #G.mot = chatGPT.question('donne moi un mot aléatoire de la langue française en majuscule')
+    G.mot = chatGPT.question('donne moi un mot aléatoire de la langue française en majuscule')
     G.mot = random.choice(listedemots) 
 
 st.title(f'trouve le mot' )
