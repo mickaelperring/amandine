@@ -1,10 +1,13 @@
 import os
 import openai
 import random
+import streamlit as st
+import os
 
 class ChatGPT(object):
     def __init__(self):
-        self.client = None
+        apiKey = st.secrets["API_KEY"]
+        self.client = openai.OpenAI(api_key = apiKey)
 
     def question(self, q : str):
         response = self.client.chat.completions.create(

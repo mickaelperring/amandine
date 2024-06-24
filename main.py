@@ -2,7 +2,7 @@ import streamlit as st
 import random
 import pandas as pd
 from Global import G
-#from gpt import chatGPT
+from gpt import chatGPT
 
 G.init('lettresProposees', [])
 G.init('nombredefautes',0)
@@ -15,6 +15,8 @@ listedemots = ['CUISINE','CLASSEUR','TIRELIRE','SUISSE','GRASSOUILLET','POIDS','
     "FERME", "FEUILLE", "FLEUR", "FONTAINE", "FORET", "FRIGO", "GANT", "GARE", "GATEAU", "GIRAFFE", "HORLOGE", 
     "HOTEL", "ILE", "IMMEUBLE", "INSECTE", "INTERNET", "JARDIN", "JOURNAL", "JUPE", "LAC"]
 
+st.write(chatGPT.question('donne moi un mot aléatoire de la langue française en majuscule commencant par B'))
+st.stop()
 if G.mot == '' :
     #G.mot = chatGPT.question('donne moi un mot aléatoire de la langue française en majuscule')
     G.mot = random.choice(listedemots) 
