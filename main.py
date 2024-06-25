@@ -16,7 +16,7 @@ listedemots = ['CUISINE','CLASSEUR','TIRELIRE','SUISSE','GRASSOUILLET','POIDS','
     "HOTEL", "ILE", "IMMEUBLE", "INSECTE", "INTERNET", "JARDIN", "JOURNAL", "JUPE", "LAC"]
 
 if G.mot == '' :
-    G.mot = chatGPT.question('donne moi un mot aléatoire de la langue française en majuscule')
+    #G.mot = chatGPT.question('donne moi un mot aléatoire de la langue française en majuscule')
     G.mot = random.choice(listedemots) 
 
 st.title(f'trouve le mot' )
