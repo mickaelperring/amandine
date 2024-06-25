@@ -12,11 +12,14 @@ class ChatGPT(object):
     def question(self, q : str):
         response = self.client.chat.completions.create(
         model="gpt-4o",
-        temperature=0.8,
-        top_p= 0.3,
+        temperature=0.9,
+        frequency_penalty=0.5,
+        presence_penalty=0.6,
+        top_p= 0.85,
         seed = int(random.random()),
+        max_tokens=150,
         messages=[
-            {"role": "system", "content": "YYou are ChatGPT, you speak french, answer as concisely as possible"},
+            {"role": "system", "content": "You are ChatGPT, you speak french, answer as concisely as possible"},
             {"role": "user", "content" : f"{q}"},
         ]
         )
